@@ -69,7 +69,7 @@ class CitizenManagementTest extends TestCase
 
         $response->assertOk()
             ->assertHeader('Content-Type', 'application/vnd.ms-excel; charset=UTF-8')
-            ->assertHeader('Content-Disposition', 'attachment; filename="data-penduduk.xlsc"')
+            ->assertHeader('Content-Disposition', 'attachment; filename="data-penduduk.xls"')
             ->assertSee('Budi Santoso');
     }
 

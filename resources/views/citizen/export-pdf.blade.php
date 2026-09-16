@@ -116,6 +116,7 @@
                     <th>NIK</th>
                     <th>Nama</th>
                     <th>Nama Istri</th>
+                    <th>Status Rumah</th>
                     <th>No. Rumah</th>
                     <th>Pernikahan</th>
                     <th>Anak</th>
@@ -129,6 +130,7 @@
                     <td>{{ $citizen->nik }}</td>
                     <td>{{ $citizen->name }}</td>
                     <td>{{ $citizen->wife_name ?: '-' }}</td>
+                    <td>{{ $citizen->house_status ?: '-' }}</td>
                     <td>{{ $citizen->house_number }}</td>
                     <td>{{ $citizen->marital_status }}</td>
                     <td>{{ $citizen->children_count }}</td>

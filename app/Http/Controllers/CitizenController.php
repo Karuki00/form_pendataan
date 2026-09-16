@@ -85,7 +85,7 @@ class CitizenController extends Controller
 
         return response()->view('citizen.export-table', compact('citizens'))
             ->header('Content-Type', 'application/vnd.ms-excel; charset=UTF-8')
-            ->header('Content-Disposition', 'attachment; filename="data-penduduk.xlsc"');
+            ->header('Content-Disposition', 'attachment; filename="data-penduduk.xls"');
     }
 
     public function exportPdf(): Response
