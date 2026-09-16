@@ -15,6 +15,7 @@ class Citizen extends Model
         'nik',
         'name',
         'wife_name',
+        'house_status',
         'house_number',
         'marital_status',
         'children_count',

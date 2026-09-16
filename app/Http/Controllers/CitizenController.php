@@ -111,6 +111,12 @@ class CitizenController extends Controller
         };
         $data['monthly_income'] = 0;
 
+        $data['house_status'] = match ($data['house_status']) {
+            'owned' => 'owned',
+            'rented' => 'rented',
+            'other' => 'other',
+        };
+
         return $data;
     }
 }

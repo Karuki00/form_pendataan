@@ -18,6 +18,7 @@ class UpdateCitizenRequest extends FormRequest
             'nik' => ['required', 'string', 'max:16', Rule::unique('citizens')->ignore($this->citizen)],
             'name' => ['required', 'string', 'max:255'],
             'wife_name' => ['nullable', 'string', 'max:255'],
+            'house_status' => ['required', 'in:owned,rented,other'],
             'house_number' => ['required', 'string', 'max:50'],
             'marital_status' => ['required', 'in:single,married,divorced,widowed'],
             'children_count' => ['required', 'integer', 'min:0'],

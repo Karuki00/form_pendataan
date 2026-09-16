@@ -16,6 +16,7 @@ class CitizenManagementTest extends TestCase
             'nik' => '3273010101010001',
             'name' => 'Budi Santoso',
             'wife_name' => 'Siti Santoso',
+            'house_status' => 'owned',
             'house_number' => '12A',
             'marital_status' => 'married',
             'children_count' => 2,
@@ -27,6 +28,7 @@ class CitizenManagementTest extends TestCase
         $this->assertDatabaseHas('citizens', [
             'nik' => '3273010101010001',
             'wife_name' => 'Siti Santoso',
+            'house_status' => 'owned',
             'house_number' => '12A',
             'children_count' => 2,
             'status' => 'active',
@@ -41,6 +43,7 @@ class CitizenManagementTest extends TestCase
             'nik' => $citizen->nik,
             'name' => 'Updated Name',
             'wife_name' => null,
+            'house_status' => 'rented',
             'house_number' => '99',
             'marital_status' => 'single',
             'children_count' => 0,
@@ -52,6 +55,7 @@ class CitizenManagementTest extends TestCase
         $this->assertDatabaseHas('citizens', [
             'id' => $citizen->id,
             'name' => 'Updated Name',
+            'house_status' => 'rented',
             'status' => 'moved',
             'house_number' => '99',
         ]);
