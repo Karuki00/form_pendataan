@@ -13,7 +13,12 @@ class NativeAppServiceProvider implements ProvidesPhpIni
      */
     public function boot(): void
     {
-        Window::open();
+        Window::open()
+            ->title('Pendataan Penduduk')
+            ->fullscreen()
+            ->resizable(true)
+            ->hasShadow()
+            ->hideMenu();
     }
 
     /**
