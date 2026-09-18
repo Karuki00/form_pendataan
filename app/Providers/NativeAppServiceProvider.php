@@ -15,9 +15,10 @@ class NativeAppServiceProvider implements ProvidesPhpIni
     {
         Window::open()
             ->title('Pendataan Penduduk')
-            ->fullscreen()
+            ->width(800)
+            ->height(600)
             ->resizable(true)
-            ->hasShadow()
+            ->hasShadow(false)
             ->hideMenu();
     }
 
